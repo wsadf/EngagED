@@ -1,9 +1,7 @@
 <template>
     <InternaMain>
         <v-img v-if="list.image" :alt="`Imagem Detalhes ${title}`" :src="list.image" contain max-height="500" />
-        <h1 class="bg-white">{{ list.name }}</h1>
-        <div class="bg-purple-darken-2 text-center">
-        </div>
+        <h1 class="bg-white">Episódios com {{ list.name }}.</h1>
         <v-row>
             <v-col v-for="item in episode" :key="item.id" cols="3" class="pa-0">
                 <CardCharacter page="episode" :status="list.status" :title="item.name" :species="item.air_date"
